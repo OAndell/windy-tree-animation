@@ -21,8 +21,8 @@ function Leaf(c, x, y, h, w, parent){
           }
         }
         else{
-          this.vx = windstr*10*cos(windangle);
-          this.vy = -windstr*10*sin(windangle) + 9.82*0.5;
+          this.vx = windstr*15*cos(windangle);
+          this.vy = -windstr*15*sin(windangle) + 9.82*0.5;
           this.y1 = this.y1 + this.vy;
           this.x1 = this.x1 + this.vx;
 
