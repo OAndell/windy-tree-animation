@@ -40,10 +40,20 @@ function draw() {
   background(51);
   animateTree(treeroot,globalsway);
   updateGlobalSway();
-  stroke(255);
-  strokeWeight(5);
-  line(500,-600, 500 + windstr*100*cos(windangle ), -600 - windstr*100*sin(windangle));
+  drawArrow()
+}
 
+function drawArrow(){
+  push();
+  translate(500,-600)
+  stroke(255);
+  strokeWeight(3);
+  rotate(windangle*-1)
+  //line(0,0, windstr*100*cos(windangle), - windstr*100*sin(windangle));
+  line(0,0, windstr*100, 0);
+  line(windstr*100,0, windstr*90, 5 );
+  line(windstr*100,0, windstr*90, -5 );
+  pop();
 }
 
 
